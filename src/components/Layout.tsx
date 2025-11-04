@@ -130,7 +130,7 @@ function Layout() {
         toast.error(`Screen change detected (${reason}). Attempt ${violationCount}/5`);
       });
 
-      if (violationCount >= 5) {
+      if (violationCount >= 15) {
         const tenMinutesMs = 10 * 60 * 1000;
         const until = Date.now() + tenMinutesMs;
         localStorage.setItem('exam_lockout_until', String(until));
